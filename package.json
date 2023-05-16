@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
+    "lint:ts": "eslint --ext .ts,.tsx src",
+    "lint:css": "stylelint '**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@types/node": "20.1.5",
@@ -19,5 +22,15 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@linters/eslint-config-jest": "^1.12.1",
+    "@linters/eslint-config-react": "^1.14.0",
+    "@linters/eslint-config-typescript": "^1.18.0",
+    "@linters/prettier-config": "^1.4.1",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.8"
   }
 }
