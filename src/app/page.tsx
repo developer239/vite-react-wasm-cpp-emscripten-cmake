@@ -1,3 +1,9 @@
-export default function Home() {
-  return <main>insert WASM here</main>
-}
+import { HelloComponent } from '@/app/Hello'
+
+const Home = () => (
+  <main>
+    <HelloComponent />
+  </main>
+)
+
+export default Home
