@@ -13,7 +13,7 @@ export const HelloComponent = () => {
       // const wasmInstance = await WebAssembly.instantiate(buffer, {})
 
       // @ts-ignore TODO: fix types
-      const wasmModule = await import('../public/hello.js')
+      const wasmModule = await import('../../public/hello.js')
       setMessage(wasmModule.hello())
     }
 

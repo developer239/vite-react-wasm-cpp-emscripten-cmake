@@ -13,7 +13,7 @@
     "prepare:husky": "husky install",
     "lint-staged": "lint-staged",
     "install:emsdk": "cd externals/emsdk && ./emsdk install latest && ./emsdk activate latest",
-    "build:wasm": "cd cpp && mkdir -p build && cd build && ../../externals/emsdk/upstream/emscripten/emcmake cmake .. && ../../externals/emsdk/upstream/emscripten/emmake make && mv hello.wasm ../../public/"
+    "build:wasm": "cd cpp && mkdir -p build && cd build && ../../externals/emsdk/upstream/emscripten/emcmake cmake .. && ../../externals/emsdk/upstream/emscripten/emmake make && mv hello.js ../../public/ && mv hello.wasm ../../public/ "
   },
   "dependencies": {
     "@types/node": "20.1.5",
