@@ -34,3 +34,37 @@ TypeScript & React boilerplate with C++ WASM module for native features or perfo
 - `npm run lint:ts` lint TS files
 - `npm run format` format files
 - `npm run prepare:husky` install git hooks
+
+## Example
+
+```cpp
+// cpp/src/main.cpp
+
+#include <emscripten/bind.h>
+
+std::string hello() {
+  return "Hello from C++!";
+}
+
+EMSCRIPTEN_BINDINGS(wasm_module) {
+  emscripten::function("hello", &hello);
+}
+```
+
+Define types for the glue code:
+
+```ts
+// src/wasm.d.ts
+
+declare let Module: {
+  hello: () => string
+}
+```
+
+Use global module in your app:
+
+```ts
+export const App = () => <div>{Module.hello()}</div>
+```
+
+The wasm module is loaded in `indx.html`.
