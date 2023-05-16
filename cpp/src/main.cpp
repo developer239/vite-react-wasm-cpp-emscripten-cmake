@@ -4,6 +4,6 @@ std::string hello() {
   return "Hello from C++!";
 }
 
-EMSCRIPTEN_BINDINGS(my_module) {
+EMSCRIPTEN_BINDINGS(wasm_module) {
   emscripten::function("hello", &hello);
 }

@@ -1,9 +1,1 @@
-import { useEffect } from 'react'
-
-export const App = () => {
-  useEffect(() => {
-    console.log(Module.hello())
-  }, [])
-
-  return <div>App</div>
-}
+export const App = () => <div>{Module.hello()}</div>
