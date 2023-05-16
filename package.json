@@ -9,7 +9,9 @@
     "lint": "next lint",
     "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
     "lint:ts": "eslint --ext .ts,.tsx src",
-    "lint:css": "stylelint '**/*.{ts,tsx}'"
+    "lint:css": "stylelint '**/*.{ts,tsx}'",
+    "prepare:husky": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@types/node": "20.1.5",
@@ -24,6 +26,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@linters/commitlint-config": "^1.8.0",
     "@linters/eslint-config-jest": "^1.12.1",
     "@linters/eslint-config-react": "^1.14.0",
     "@linters/eslint-config-typescript": "^1.18.0",
@@ -31,6 +35,8 @@
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   }
 }
